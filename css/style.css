@@ -1,0 +1,378 @@
+body {
+    background-color: rgb(230,230,230) ;  /* Gris Clair */ 
+	
+	margin-left: 0px ; 
+	margin-right: 0px ; 
+}
+
+p {
+    text-align: center ; 
+    font-style: italic ; 
+	font-size: 20px ; 
+}
+
+h1 {
+    color : black ; 
+	display: none ; 
+    
+}
+
+
+h2 {
+    text-align: center ; 
+    color :  rgb(16,62,98) ;
+	margin-top: 2% ;  /**/ 
+	font-size: 30px ; 
+    font-style: italic;   
+	font-weight: bold;
+}
+
+h3 {   /* Pour le Slider */
+    font-family: "rajdhanibold", arial, serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+h5 {  /* separateur */ 
+	border : 1px black solid ; 
+	width: 30% ; 
+	margin-left: 35% ; 
+	text-align: center ; 
+}
+/* ---------- HEADER ---------- */
+div#NavLogo{   
+	height : 80px ; 
+    width: 100%%;  
+    background-color : rgb(16,62,98) ;  
+	z-index : 1; 
+	position:fixed ;
+        top:    0;
+	    left :  0;
+	    right : 0; 
+}
+div#NavLogo a:hover {    
+	color : rgb(255,0,0) ; 
+	text-decoration: italic ;
+}
+.MenuHead {
+	padding-left : 15px ;
+	font-size : 25px ; 
+	text-decoration:none;
+	color : white ; 
+}
+nav { 
+	width : 40% ;
+	height : auto ;	
+	margin-top : 25px ; 
+	margin-right :5% ; 
+	margin-left : 48% ;
+}
+
+nav p {
+	color : white ;
+	font-size: 40px ;
+	margin : auto ;
+}
+
+
+.Logo1 {   
+	float : left ;
+	margin-left : 25% ; 
+	margin-top : 0% ; 
+}
+
+/* ---------- END HEADER ---------- */
+
+/* ***** Slider ***** */ 
+#section_slider {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 90px;
+    padding-top: 0px;
+    
+    padding-bottom: 5px ; 
+    margin-bottom: 15px ;
+ 
+}
+
+#container_slider {
+    position: relative;    
+    background-color: rgb(16,62,98) ;  /* #555 */ 
+    width: 70%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0, 1);  
+    
+    
+}
+
+#liste_slides {
+    list-style-type: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 0px;
+}
+.slide {
+    position:relative;
+    margin-top: 0px;
+    width: 100%;
+    height: 450px;
+    display: none;
+    margin-left: 0px;
+}
+
+.slide h3 {
+    color: white ; /* #ff0000 */ /* rgb(16,62,98) */
+}
+#slide1 {
+    display: block;
+}
+
+.diapo {
+    width: 100%;
+    min-width: 600px;
+    height: 450px;
+    margin-left: 0px;
+    
+  /*  border : 3px blue dashed ; */
+}
+#slider {
+    width: 75%;
+    max-width: 680px;
+    height: 400px;
+    overflow: hidden;
+    margin-left: auto;    /* Auto */ 
+    margin-right: auto;
+    margin-top: 0px;
+    padding-left: 0px;
+    
+ /*   border : 3px black solid ; */
+}
+.slide figcaption {
+    position: absolute;
+    width: 60%;
+    height: auto; /* 150px */ 
+
+    left: 20px;  /* 20 px ***************/ 
+    top : 20px ; 
+    
+    
+    border-radius: 10px 10px 10px 10px;    
+    background-color: rgba(24, 24, 24, 0.6); /* 0.6 ajuster la transparance de figcaption */ 
+    color: #fff;  
+    font-family: arial, serif;
+    font-size: 0.9em;
+    padding-top: 10px;
+    padding-left: 15px;
+	
+	
+    z-index: 0;  /* passe en dessous du menu */ 
+}
+
+.red, .green {
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+
+.bleu {
+    color : rgb(16,62,98) ;
+}
+
+#fleche_gauche, #fleche_droite {
+    background: rgba(0,0,0,0.8);
+	width: 50px;
+	height: 50px;
+	border-radius: 25px 25px 25px 25px;
+	position: absolute;
+    cursor: pointer;
+}
+
+#fleche_gauche { /*fleches de commande du slider*/
+	top: 190px; left: 70px;
+	z-index: 0;  /* passe en dessous du menu */ 
+}
+
+#fleche_droite { /*fleches de commande du slider*/
+	top: 190px; right: 70px;
+	z-index: 0;
+}
+
+#fleche_droite i {
+	color: white;
+	position: absolute;
+	top: 10px; right: 10px;
+}
+
+#fleche_gauche i {
+	color: white;
+	position: absolute;
+	top: 10px; left: 10px;
+	
+}
+
+/******************************* */ 
+/* Maps */ 
+#map {
+	height: 400px;
+    width: 70%; 
+	border-radius: 5% ; 
+	text-align: center ; 
+	margin: auto ; 
+	margin-bottom: 20px; 
+	
+}
+
+/* ****************************** */ 
+#resa {  /* = resa */ 
+    position: relative;
+    border: 0.5px solid #888;
+    background-color: #fff;
+    width: 45%;
+    height: 600px;
+    margin-left: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0, 1);
+	margin-top : 3% ; 
+	display: none ; 
+	text-align: center ; 
+	margin-left: 27% ; 
+	margin : auto ; 
+}
+	
+#titre_resa {
+    width: 90%;
+    margin-left: 10px;
+    text-align: center;
+}
+
+#resa h4 {
+    font-family: "rajdhanibold", arial, serif;
+    text-transform: uppercase;
+    font-size: 30px ;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#resa p {
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+
+/* Pour Signer balise Canva */ 
+#canvas {
+  display: flex;
+ /* width: 400px;
+  height: 200px; */
+  margin: 0 auto; 
+  background: #ecf0f1;
+  border: 3px solid black;
+	
+    margin-top: 5px ; 
+	margin-bottom: 5px ; 
+}
+
+#Reservation {
+  background: #2bae00;
+  color: #ecf0f1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0 5px;
+  width:  100px ; 
+  height: 23px ; 
+  display: inline-block;
+  border-radius: 2px ; 
+}
+#Reservation:hover {
+  transform: scale(1.1);
+}
+
+#recommencer {
+  background: #c57117;
+  color: #ecf0f1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  width:  160px ; 
+  height: 23px ; 
+  display: inline-block;
+  border-radius: 2px ; 
+}
+
+#recommencer:hover {
+  transform: scale(1.1);
+}
+
+#Compte {
+	text-align: center ; 
+	color : rgb(16,62,98) ;
+	font-size: 20px ; 
+	display: block ; 
+	
+}
+
+
+#Compte1 {
+	text-align: center ; 
+	color : rgb(16,62,98) ;
+	font-size: 20px ; 
+	
+}
+
+#confirm {
+	color : red ; 
+	margin-top: 10px ; 
+}
+#confirm1 {
+	text-align: center ; 
+	color : rgb(16,62,98) ;
+	font-size: 20px ; 
+}
+
+#confirm01 {
+	text-align: center ; 
+	color : /*rgb(16,62,98)*/ red ;
+	font-size: 20px ; 
+}
+/* ---------- SECTION ---------- */
+aside {
+    border : 3px orange solid ; 
+    
+    margin-top: 60px ; 
+    margin-bottom: 30px ; 
+    
+    
+}
+
+/* ---------- END SECTION ---------- */
+/* ---------- FOOTER ---------- */
+footer {
+ /*   border : 3px blue solid ;  */
+    background-color: /*rgb(16,62,98) */ white ; 
+	margin-top: 2% ; 
+	padding-bottom:  30px ; 
+	width: 45% ; 
+	margin : auto; 
+	box-shadow: 0px 5px 15px rgba(0,0,0, 1);
+	
+	/*display: none ; */
+}
+/* ---------- END FOOTER ---------- */
+
+
+
+
+

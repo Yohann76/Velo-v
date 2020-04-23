@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <META charset="utf-8" />
+        <title> Vélo'v  </title>
+        <link rel="icon" href="images/favicon1.png" />  
+		
+        <!-- Cascading Style Sheets -->
+        <link rel="stylesheet" href="css/style.css" /> 
+        <link rel="stylesheet" href="css/style.min.1024.css" /> <!-- Max-Width 1024 --> 
+		
+        
+		<META NAME="keywords" CONTENT="Velo'v,Reservez un vélo,Lyon,Vélo" />
+		<META name="description" content="Vélov'V Vous proposent des vélo disponible dans Lyon, 
+										  Avec Vélo'v vous pouvez réservez quand vous le voulez en un clic ! " />
+                    
+        <!-- FONT AWESOME -->
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+	</head>
+<body>
+        <!-- HEADER --> 
+<header>
+    <div id="NavLogo">  
+		  <img src="images/Logo.PNG.png"  class="Logo1"  alt="ImageLogo" />	 
+		  <nav>
+		     <p>
+				<strong> Application de reservation Velo'V</strong>
+		     </p>
+         </nav>			    		 		  
+    </div>   
+</header>  
+        <h1> Velo'V Application de reservation de Velo'V </h1> <!-- SEO --> 
+        <!-- START SLIDER --> 
+        <section id="section_slider">
+            <div class="section_titre">
+                <h2>Avec Vélo'v vous pouvez réservez quand vous le voulez</h2>
+				<h5></h5>
+                <p> Utilisez les flèches directionnelles droite et gauche pour animer le slider </p>
+            </div>
+
+            <div id="container_slider">
+
+                <div id="slider" class="slider">
+                    
+                    <ul id="liste_slides">
+                        <li>
+                            <figure class="slide" id="slide1">
+                                <img src="images/Slider/1Select.PNG" class="diapo" alt="img1" /> <!-- img 1 --> 
+                                <!-- ICIII figcaption      --> 
+                                <figcaption><h3>1. Sélectionner</h3>
+                                <p>Cliquez sur la station pour afficher ses informations. <br /><br />
+									Si la station est fermée ou n'a pas de Vélo'v disponible vous ne pouvez pas reserver <br />
+									 <br />
+									Vous pouvez ensuite voir les informations de la station dans le panneau "DÉTAILS DE LA STATION" </p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                           
+                        
+                        <li>
+                            <figure class="slide" id="slide2">
+                                <img src="images/Slider/2valid.PNG" class="diapo" alt="img2" /> <!-- img 2 --> 
+                                <figcaption><h3>2. Valider</h3> 
+                                <p>Pour valider votre réservation, apposez votre signature dans le cadre, puis cliquez sur "Réserver". <br /><br />
+									Pour choisir une autre station, cliquez sur le marqueur pour afficher ses informations.<br />
+									Pour recommencer votre signature, cliquez sur "Effacer".</p></figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="slide" id="slide3">
+                                <img src="images/Slider/3info.PNG" class="diapo" alt="img1" /> <!-- img 3 --> 
+                                <figcaption><h3>3. Informations</h3> 
+                                    <p>Vos informations de réservation sont affichées en bas de page. <br />
+										Votre Vélo'v vous est réservé pendant 20 minutes.<br /><br />
+                                    <span class="red">Attention :</span> au-delà de 20 minutes votre réservation expire, vous devez renouveler l'opération.</p>
+                                </figcaption>
+                            </figure>
+                        </li>                    
+                    </ul>
+                </div>
+
+                <div class="fleche">
+                    <button id="fleche_gauche"><i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i></button>
+                </div>
+
+                <div class="fleche">
+                    <button id="fleche_droite"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></button>
+                </div>
+
+            </div>
+        </section>
+    
+        <!-- END SLIDER -->
+	
+	    <h2>Reservez votre Velo'V maintenant !</h2>
+	    <h5> </h5>
+	    <p> Cliquez sur une station pour reservé !</p>
+	    <div id="map"></div>
+	   
+		<div id="resa"> 
+					<div>
+                        <h3 id="titre_resa">Détails de la station : </h3>
+                    </div>
+
+                    <div id="station">
+                        	<h4>Adresse de la station:</h4>
+							<p id="adresse"></p>  <!-- Ici on rentre l'adresse de la station en js -->
+							<h4>Nombre de places:</h4>
+							<p id="places"></p>
+							<h4>Nombre de vélos disponibles:</h4>
+							<p id="dispo"></p>
+												
+						<!--	<button id="bouton_resa">Réserver</button> --> 
+                    </div>
+
+                    <div id="signature">
+                        <p>Pour réserver votre Vélo'v, apposez votre signature sur le champs ci-dessous, puis cliquer sur "Réserver".</p>
+
+						<canvas id="canvas" width="400" height="200"></canvas>
+						
+						<div id="Reservation">Réserver</div>
+						<div id="recommencer">Recommencer</div>
+					</div>
+						
+                    <div id="confirm"> </div> <!-- Incrementer en JS ( resa ) --> 
+                      
+		</div>	        
+ <footer>
+     <!--RÉSERVATION-->
+        <h2>VOTRE RESERVATION</h2>
+	 <div id="confirm1"></div>
+	 <div id="confirm01"></div> <!-- Il vous reste : -->
+	 <div id="Compte"> </div>
+	 <div id="Compte1"></div>
+     <!--END RÉSERVATION-->	 
+</footer>
+
+
+    
+    
+    <script src="js/jquery-3.2.1.js"> </script>       <!-- Bibliotheque JavaScript Jquery   --> 
+	<script src="js/ajax.js">         </script>       <!-- Script Ajax --> 
+    
+    <script src="js/Map.js">          </script>       <!-- Script  map --> 
+
+    <script src="js/Slider.js">       </script>       <!-- Script Slider--> 
+
+    <script src="js/time.js">         </script>       <!-- Script Temps --> 
+    <script src="js/canvas.js">       </script>       <!-- Signature   --> 
+    <script src="js/resa.js">         </script>       <!-- Reservation   --> 
+    
+    
+    <!-- New key api AIzaSyBmivKEm4KbwVr9_-8SrutrHZsUWaJZj3c --> 
+    <!-- AIzaSyBb7oOwvI294jcMtfXRqHSCIviljF4LRMs Ancienne key --> 
+    <!-- 3iem key créer : AIzaSyBgwjkEh1IPlwkYxEytRAEs2i6wXjegtSQ --> 
+    
+    <!-- NEW 4 KEY :  AIzaSyDlUiiNYpsCxBPRH0GVfhaU6-H59TnaHyE   --> 
+	<!-- Clé de la map --> 
+    
+   <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgwjkEh1IPlwkYxEytRAEs2i6wXjegtSQ&callback=initMap" > 
+    </script>  -->
+    
+    
+    
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlUiiNYpsCxBPRH0GVfhaU6-H59TnaHyE&callback=initMap"
+      type="text/javascript"></script>  
+    
+    
+
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
